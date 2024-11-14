@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background */
+    color: #ffffff; /* Light text */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+header p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Main Layout */
+.main-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Sidebar (Chat History) */
+.sidebar {
+    width: 250px;
+    background-color: #292929;
+    padding: 15px;
+    border-right: 1px solid #444;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    background-color: #444;
+}
+
+/* Chat Section */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+}
+
+/* Chat Output Section */
+.chat-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.chat-output {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 300px; /* Fixed height */
+    overflow-y: auto; /* Scrollable */
+}
+
+/* Message Bubbles */
+.message {
+    display: flex;
+    align-items: flex-start;
+}
+
+.message.right {
+    justify-content: flex-end;
+}
+
+.avatar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.avatar2 {
+    background-color: #555;
+}
+
+.bubble {
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 60%;
+}
+
+.bubble1 {
+    background-color: #0066ff;
+    color: #fff;
+}
+
+.bubble2 {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Final Output Section */
+.final-output {
+    background-color: #292929;
+    color: #fff;
+    padding: 10px;
+    border-top: 1px solid #444;
+}
+
+.final-output h2 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+/* Input Section */
+.prompt-bar {
+    display: flex;
+    padding: 10px;
+    background-color: #333;
+    border-top: 1px solid #444;
+}
+
+.prompt-bar input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #292929;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.prompt-bar button {
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.prompt-bar button:hover {
+    background-color: #0056cc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #292929;
+    color: #aaa;
+    border-top: 1px solid #444;
+}
+
+/* Additional styles for Add Chat Icon */
+.add-chat {
+    margin-top: 10px;
+    text-align: center;
+    width: 220px; /* Make it full width of the parent container */
+}
+
+.add-chat-icon {
+    font-size: 18px; /* Font size */
+    color: #0066ff; /* Blue color for the + sign */
+    cursor: pointer;
+    display: inline-block;
+    border: 2px dashed #0066ff; /* Dashed border for a button effect */
+    padding: 10px; /* Padding for the button */
+    border-radius: 5px; /* Slightly rounded corners */
+    width: 100%; /* Match the width of chat boxes */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+    box-shadow: 0 0 5px rgba(0, 102, 255, 0.5); /* Subtle blur effect */
+}
+
+.add-chat-icon:hover {
+    background-color: #0066ff;
+    color: #fff; /* Change text color on hover */
+    box-shadow: 0 0 10px rgba(0, 102, 255, 0.8); /* Enhanced blur effect on hover */
+}

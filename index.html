@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual GPT Interaction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dual GPT Interaction</h1>
+            <p>Watch ChatGPT1 and ChatGPT2 discuss your prompt</p>
+        </header>
+
+        <div class="main-container">
+            <!-- Sidebar for chat history -->
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <h2>Chat History</h2>
+                    <i class="fas fa-clock clock-icon"></i> <!-- Timer icon -->
+                </div>
+                <ul id="chat-history">
+                    <li>Explore more powerful engines...</li> <!-- Placeholder text -->
+                </ul>
+                <div class="add-chat">
+                    <span class="add-chat-icon">+</span> <!-- Add new chat icon -->
+                </div>
+            </div>
+
+            <main>
+                <!-- Chat Output Section -->
+                <div class="chat-container">
+                    <div class="chat-output" id="chat-output"></div>
+                </div>
+
+                <!-- Prompt bar -->
+                <div class="prompt-bar">
+                    <input type="text" id="user-prompt" placeholder="Enter a topic or prompt..." onkeypress="if(event.key === 'Enter'){ startConversation(); }">
+                    <button onclick="startConversation()">Start Discussion</button>
+                </div>
+
+                <!-- Final Output section -->
+                <div class="final-output">
+                    <h2>Final Output</h2>
+                    <div id="final-output-text">The conclusions will appear here as the discussion progresses.</div>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <p>Auto-simulated AI conversation</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
